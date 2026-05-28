@@ -25,10 +25,6 @@ export default function CrudScreen() {
 
   const [editingId, setEditingId] = useState<string | null>(null);
 
-  // =========================
-  // READ (GET)
-  // =========================
-
   useEffect(() => {
     fetch("https://graphql-pokeapi.graphcdn.app/", {
       method: "POST",
