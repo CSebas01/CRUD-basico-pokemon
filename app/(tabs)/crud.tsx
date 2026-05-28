@@ -61,11 +61,6 @@ export default function CrudScreen() {
 
       .catch((error) => console.log(error));
   }, []);
-
-  // =========================
-  // CREATE (POST SIMULADO)
-  // =========================
-
   const handleAdd = () => {
     const newPokemon: Pokemon = {
       id: Date.now().toString(),
@@ -82,11 +77,6 @@ export default function CrudScreen() {
     setName("");
     setImage("");
   };
-
-  // =========================
-  // UPDATE (PUT/PATCH SIMULADO)
-  // =========================
-
   const handleUpdate = () => {
     if (!editingId) return;
 
@@ -107,21 +97,11 @@ export default function CrudScreen() {
     setName("");
     setImage("");
   };
-
-  // =========================
-  // DELETE
-  // =========================
-
   const handleDelete = (id: string) => {
     const filteredPokemons = pokemons.filter((pokemon) => pokemon.id !== id);
 
     setPokemons(filteredPokemons);
   };
-
-  // =========================
-  // EDITAR
-  // =========================
-
   const handleEdit = (pokemon: Pokemon) => {
     setEditingId(pokemon.id);
 
